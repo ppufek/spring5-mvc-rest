@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @Api(description = "This is my Customer Controller")
-@RestController
+@RestController //if we put this, our methods here don't have to return ResponseEntity --> @Controller + @ResponseBody
 @RequestMapping(CustomerController.BASE_URL)
 public class CustomerController {
 
