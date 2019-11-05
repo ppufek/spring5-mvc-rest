@@ -1,5 +1,14 @@
 package guru.springfamework.config;
-
+/*
+ * IF NOT WORKING SPRING-BOOT PROJECT -->
+ *      - extend this class with WebMvcConfigurationSupport
+ *      - implement (@Override) addResourceHandlers(ResourceHandlerRegistry registry) {
+ *                          registry.addResourceHandler("swagger-ui.html") //first component we have to bring in
+ *                                  .addResourceLocations("classpath:/META-INF/resources/");
+ *                          registry.addResourceHandler("/webjars/**") //second component, WebJars for styling
+ *                                  .addResourceLocations("classpath:/META-INF/resources/webjars/");
+ *                   }
+ */
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -28,7 +37,7 @@ public class SwaggerConfig {
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
                 .title("Spring Boot REST API")
-                .description("\"Spring Boot REST API for Online Store\"")
+                .description("Spring Framework 5: Beginner to Guru")
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
